@@ -63,9 +63,28 @@ footer { background: #111; text-align: center; padding: 20px; }
 </div>
 
 <div id="thankyouPage" class="thankyou">
-<h1>Thank You for Your Order</h1>
-<p>Your food is being prepared</p>
+    <h1>Thank You for Your Order</h1>
+    <p>Your food is being prepared</p>
 </div>
+
+<footer>
+    <p>© 2026 A's Food And Drinks</p>
+</footer>
+
+<script>
+function addToOrder(item) {
+    const list = document.getElementById('orderList');
+    const li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+}
+
+function checkout() {
+    document.getElementById('mainPage').style.display = 'none';
+    const thank = document.getElementById('thankyouPage');
+    thank.style.display = 'flex';
+}
+</script>
 
 <footer><p>© 2026 MJKR's Food And Drinks</p></footer>
 
