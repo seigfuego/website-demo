@@ -72,20 +72,23 @@ footer { background: #111; text-align: center; padding: 20px; }
 </footer>
 
 <script>
-function addToOrder(item) {
+let total = 0;
+
+function addToOrder(item, price) {
     const list = document.getElementById('orderList');
     const li = document.createElement('li');
-    li.textContent = item;
+    li.textContent = item + ' - ₱' + price;
     list.appendChild(li);
+
+    total += price;
+    document.getElementById('total').textContent = total;
 }
 
 function checkout() {
     document.getElementById('mainPage').style.display = 'none';
-    const thank = document.getElementById('thankyouPage');
-    thank.style.display = 'flex';
+    document.getElementById('thankyouPage').style.display = 'flex';
 }
 </script>
-
 <footer><p>© 2026 MJKR's Food And Drinks</p></footer>
 
 
