@@ -84,6 +84,15 @@ function checkout() {
     document.getElementById('mainPage').style.display = 'none';
     document.getElementById('thankyouPage').style.display = 'flex';
 }
+
+function goBack() {
+    document.getElementById('thankyouPage').style.display = 'none';
+    document.getElementById('mainPage').style.display = 'block';
+
+    document.getElementById('orderList').innerHTML = '';
+    total = 0;
+    document.getElementById('total').textContent = total;
+}
 </script>
 
 </body>
